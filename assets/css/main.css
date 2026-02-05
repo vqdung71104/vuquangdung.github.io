@@ -1,0 +1,67 @@
+/**
+ * Main CSS File
+ * Imports all component styles in correct order
+ * 
+ * Order matters:
+ * 1. Base styles (reset, variables, typography)
+ * 2. Components
+ * 3. Utilities
+ */
+
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import './base/variables.css';
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* Components */
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/about.css';
+@import './components/academic.css';
+@import './components/projects.css';
+@import './components/skills.css';
+@import './components/contact.css';
+@import './components/footer.css';
+
+/* Utilities */
+@import './utilities/helpers.css';
+
+/* Global Styles */
+section {
+    padding: var(--spacing-4xl) 0;
+}
+
+.section-title {
+    font-size: var(--font-size-5xl);
+    text-align: center;
+    margin-bottom: var(--spacing-3xl);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: -0.02em;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+}

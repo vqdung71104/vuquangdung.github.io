@@ -1,0 +1,16 @@
+/**
+ * Footer Component
+ * Site footer
+ */
+
+footer {
+    background-color: var(--bg-primary);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
