@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Vu Quang Dung - Software/AI Student">
     <title>Vu Quang Dung - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,6 +21,7 @@
                 <h1 class="logo">VQD</h1>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#academic">Academic</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -25,9 +33,13 @@
     <main>
         <section id="hero" class="hero">
             <div class="container">
-                <h1 class="hero-title">Vu Quang Dung</h1>
-                <p class="hero-subtitle">Software & AI Student</p>
-                <a href="#about" class="cta-button">Learn More</a>
+                <div class="hero-content">
+                    <h1 class="hero-title">Vu Quang Dung</h1>
+                    <p class="hero-subtitle">Software & AI Student</p>
+                    <p class="hero-description">Passionate about building intelligent systems and creating impactful
+                        solutions</p>
+                    <a href="#about" class="cta-button">Explore My Work</a>
+                </div>
             </div>
         </section>
 
@@ -35,17 +47,77 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <p>I am a passionate Software and AI student with a strong interest in international development environments.
-                    My academic journey is complemented by language proficiency certifications including IELTS 7.0 and JLPT N2, 
-                    which enable me to collaborate effectively in diverse, global teams.</p>
+                    <p>I am a passionate Software and AI student with a strong interest in international development
+                        environments.
+                        My academic journey is complemented by language proficiency certifications including IELTS 7.0
+                        and JLPT N2,
+                        which enable me to collaborate effectively in diverse, global teams.</p>
                     <div class="certifications">
                         <div class="cert-item">
-                            <span class="cert-label">IELTS</span>
-                            <span class="cert-score">7.0</span>
+                            <div class="cert-label">English</div>
+                            <span class="cert-score">IELTS 7.0</span>
                         </div>
                         <div class="cert-item">
-                            <span class="cert-label">JLPT</span>
-                            <span class="cert-score">N2</span>
+                            <div class="cert-label">Japanese</div>
+                            <span class="cert-score">JLPT N2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academic" class="academic">
+            <div class="container">
+                <h2 class="section-title">Academic Performance</h2>
+                <div class="academic-grid">
+                    <div class="academic-card gpa-chart">
+                        <h3>GPA Trend (Last 6 Semesters)</h3>
+                        <canvas id="gpaChart"></canvas>
+                    </div>
+                    <div class="academic-card gpa-table">
+                        <h3>Detailed Performance</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Semester</th>
+                                        <th>GPA</th>
+                                        <th>CPA</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>20242</td>
+                                        <td><span class="grade-badge high">3.45</span></td>
+                                        <td><span class="grade-badge high">3.12</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20241</td>
+                                        <td><span class="grade-badge medium">2.91</span></td>
+                                        <td><span class="grade-badge high">3.04</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20232</td>
+                                        <td><span class="grade-badge high">3.08</span></td>
+                                        <td><span class="grade-badge high">3.14</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20231</td>
+                                        <td><span class="grade-badge high">3.24</span></td>
+                                        <td><span class="grade-badge high">3.16</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20222</td>
+                                        <td><span class="grade-badge medium">2.77</span></td>
+                                        <td><span class="grade-badge medium">2.96</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20221</td>
+                                        <td><span class="grade-badge high">3.2</span></td>
+                                        <td><span class="grade-badge high">3.2</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -54,133 +126,335 @@
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <div class="project-header">
-                            <h3>Student Management System</h3>
-                            <span class="project-tag">Full-Stack Application</span>
+                        <div class="project-preview">
+                            <div class="preview-gradient preview-gradient-1">
+                                <div class="preview-icon">
+                                    <i class="devicon-react-original"></i>
+                                </div>
+                            </div>
                         </div>
-                        <p class="project-description">
-                            A comprehensive academic management platform where students can upload their academic progress
-                            and receive intelligent course recommendations with sugestive subjects and optimized classes.
-                            Featuring with a Hybrid Chatbot with Intent Classification using TF-IDF, Word2Vec, and Cosine Similarity
-                             for natural language queries. 
-                             Implements NL2SQL service with 45 SQL templates for database interaction. 
-                             Includes intelligent academic counseling Rule Engine that recommends courses 
-                             based on curriculum roadmap, failed courses, and academic warning levels. 
-                             Features schedule optimization using itertools.product algorithm 
-                             to generate conflict-free timetables with Top 3 recommendations based on personal preferences. 
-                             Built with three-tier architecture using FastAPI (async backend), 
-                             React 19 with Ant Design 5 and Tailwind CSS (frontend), Chart.js for GPA visualization, 
-                             and MySQL database (14 tables via SQLAlchemy ORM). 
-                             Secured with JWT authentication, Bcrypt password hashing, and email OTP verification. 
-                             Supports bulk data upload via Excel files for both administrators and students.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">FastAPI</span>
-                            <span class="tech-badge">React 19</span>
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">MySQL</span>
-                            <span class="tech-badge">SQLAlchemy</span>
-                            <span class="tech-badge">NLP</span>
-                            <span class="tech-badge">TF-IDF</span>
-                            <span class="tech-badge">Word2Vec</span>
-                            <span class="tech-badge">Ant Design</span>
-                            <span class="tech-badge">Tailwind CSS</span>
-                            <span class="tech-badge">Chart.js</span>
-                            <span class="tech-badge">JWT</span>
-                            <span class="tech-badge">Vite</span>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Student Management System</h3>
+                                <span class="project-tag">Full-Stack developer</span>
+                            </div>
+
+                            <div class="project-description">
+                                <div class="description-section">
+                                    <h4><span class="emoji">🎯</span> Problem</h4>
+                                    <p>Students struggle to choose optimal course schedules and choose favorite classes
+                                        based on their personal academic performance and preferences.
+                                    </p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">💡</span> Solution</h4>
+                                    <p>Built a comprehensive platform with AI-powered chatbot using TF-IDF, Word2Vec,
+                                        and Cosine Similarity for intent classification and natural language queries.
+                                        Implemented NL2SQL service with 45 templates and intelligent Rule Engine for
+                                        recommendations.</p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">✨</span> Result</h4>
+                                    <p>Delivered a three-tier architecture system with schedule optimization algorithm
+                                        generating conflict-free timetables. Features secure JWT authentication, bulk
+                                        Excel upload, and real-time GPA visualization.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-icon-group">
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-python-plain colored"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-fastapi-plain colored"></i>
+                                        <span>FastAPI</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-react-original colored"></i>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-typescript-plain colored"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-mysql-plain colored"></i>
+                                        <span>MySQL</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-tailwindcss-plain colored"></i>
+                                        <span>Tailwind</span>
+                                    </div>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">NLP</span>
+                                    <span class="tech-badge">TF-IDF</span>
+                                    <span class="tech-badge">Word2Vec</span>
+                                    <span class="tech-badge">SQLAlchemy</span>
+                                    <span class="tech-badge">Ant Design</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                    <span class="tech-badge">JWT</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="project-header">
-                            <h3>ITSS</h3>
-                            <span class="project-tag">Teamwork</span>
+                        <div class="project-preview">
+                            <div class="preview-gradient preview-gradient-2">
+                                <div class="preview-icon">
+                                    <i class="devicon-typescript-plain"></i>
+                                </div>
+                            </div>
                         </div>
-                        <p class="project-description"> I wrote backend CRUD API for this project to communicate with the database. 
-                            With this website, tutor can assign, manage and rate the work of teams in class. 
-                            Group monitor can assign tasks for team members.
-                            Team members can collaborate and track their progress.
-                            Each member will be rated and evaluated based on their contributions by other members and tutor.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">TypeScript</span>
-                            <span class="tech-badge">Python</span>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>ITSS - Team Collaboration Platform</h3>
+                                <span class="project-tag">Backend developer</span>
+                            </div>
+
+                            <div class="project-description">
+                                <div class="description-section">
+                                    <h4><span class="emoji">🎯</span> Problem</h4>
+                                    <p>Tutors and team leaders lack efficient tools to assign, track, and evaluate team
+                                        member contributions in collaborative class projects.</p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">💡</span> Solution</h4>
+                                    <p>Developed backend CRUD API to enable tutors to assign and manage team tasks.
+                                        Group monitors can delegate work to members, while the system tracks progress
+                                        and facilitates peer evaluation.</p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">✨</span> Result</h4>
+                                    <p>Created a comprehensive collaboration platform where team members are rated by
+                                        both peers and tutors based on their contributions, promoting accountability and
+                                        fair assessment.
+                                        Groups can also check the contribution of each member based on git commits.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-icon-group">
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-typescript-plain colored"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-python-plain colored"></i>
+                                        <span>Python</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="project-card">
-                        <div class="project-header">
-                            <h3>IT4409-FE</h3>
-                            <span class="project-tag">Teamwork</span>
+                        <div class="project-preview">
+                            <div class="preview-gradient preview-gradient-3">
+                                <div class="preview-icon">
+                                    <i class="devicon-javascript-plain"></i>
+                                </div>
+                            </div>
                         </div>
-                        <p class="project-description">Use API from Backend repo and getstream.io to build a real-time chat and call application.</p>
-                        <div class="project-tech">
-                            <span class="tech-badge">JavaScript</span>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>IT4409-FE - Real-Time Chat & Call</h3>
+                                <span class="project-tag">frontend developer</span>
+                            </div>
+
+                            <div class="project-description">
+                                <div class="description-section">
+                                    <h4><span class="emoji">🎯</span> Problem</h4>
+                                    <p>Users need a reliable platform for real-time communication with integrated chat
+                                        and video/audio calling capabilities.</p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">💡</span> Solution</h4>
+                                    <p>Integrated GetStream.io API and custom backend APIs to build a real-time
+                                        messaging and calling application with seamless user experience.</p>
+                                </div>
+                                <div class="description-section">
+                                    <h4><span class="emoji">✨</span> Result</h4>
+                                    <p>Delivered a fully functional chat and call application with real-time
+                                        synchronization, online status indicators, add/recieve friend requests
+                                        and reliable video/audio communication.</p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech">
+                                <div class="tech-icon-group">
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-javascript-plain colored"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="tech-icon-item">
+                                        <i class="devicon-react-original colored"></i>
+                                        <span>React</span>
+                                    </div>
+                                </div>
+                                <div class="tech-badges">
+                                    <span class="tech-badge">GetStream.io</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
         </section>
 
         <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title">Skills & Technologies</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Data Analysis</h3>
+                        <div class="skill-category-header">
+                            <div class="skill-icon">🤖</div>
+                            <h3>Data Analysis & AI</h3>
+                        </div>
                         <div class="skill-items">
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">Intent Classification</span>
-                            <span class="skill-badge">TF-IDF</span>
-                            <span class="skill-badge">Word2Vec</span>
-                            <span class="skill-badge">Cosine Similarity</span>
-                            <span class="skill-badge">NLP</span>
-                            <span class="skill-badge">Entity Extraction</span>
-                            <span class="skill-badge">NL2SQL</span>
-                            <span class="skill-badge">Scikit-learn</span>
-                            <span class="skill-badge">Gensim</span>
-                            <span class="skill-badge">NumPy</span>
+                            <div class="skill-item">
+                                <i class="devicon-python-plain colored"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-numpy-original colored"></i>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Intent Classification</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">TF-IDF</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Word2Vec</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Cosine Similarity</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">NLP</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Entity Extraction</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">NL2SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Scikit-learn</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Gensim</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="skill-category">
-                        <h3>Programming Languages</h3>
+                        <div class="skill-category-header">
+                            <div class="skill-icon">💻</div>
+                            <h3>Programming Languages</h3>
+                        </div>
                         <div class="skill-items">
-                            <span class="skill-badge">Python</span>
-                            <span class="skill-badge">TypeScript</span>
-                            <span class="skill-badge">JavaScript</span>
-                            <span class="skill-badge">SQL</span>
-                            <span class="skill-badge">MySQL</span>
-                            <span class="skill-badge">Java</span>
-                            <span class="skill-badge">Kotlin</span>
-                            <span class="skill-badge">PHP</span>
-                            <span class="skill-badge">C/C++</span>
-                            <span class="skill-badge">HTML/CSS</span>
+                            <div class="skill-item">
+                                <i class="devicon-python-plain colored"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-typescript-plain colored"></i>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-java-plain colored"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-kotlin-plain colored"></i>
+                                <span>Kotlin</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-php-plain colored"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-c-plain colored"></i>
+                                <span>C/C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span>HTML/CSS</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="skill-category">
-                        <h3>Web Development</h3>
+                        <div class="skill-category-header">
+                            <div class="skill-icon">🌐</div>
+                            <h3>Web Development</h3>
+                        </div>
                         <div class="skill-items">
-                            <span class="skill-badge">React 19</span>
-                            <span class="skill-badge">Ant Design 5</span>
-                            <span class="skill-badge">Tailwind CSS</span>
-                            <span class="skill-badge">Chart.js</span>
-                            <span class="skill-badge">FastAPI</span>
-                            <span class="skill-badge">Uvicorn</span>
-                            <span class="skill-badge">JWT</span>
-                            <span class="skill-badge">Bcrypt</span>
-                            <span class="skill-badge">SQLAlchemy</span>
-                            <span class="skill-badge">Vite</span>
+                            <div class="skill-item">
+                                <i class="devicon-react-original colored"></i>
+                                <span>React 19</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-tailwindcss-plain colored"></i>
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-fastapi-plain colored"></i>
+                                <span>FastAPI</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-sqlalchemy-plain colored"></i>
+                                <span>SQLAlchemy</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-vitejs-plain colored"></i>
+                                <span>Vite</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Ant Design 5</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Chart.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Uvicorn</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">JWT</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-badge">Bcrypt</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="skill-category">
-                        <h3>Other skills</h3>
+                        <div class="skill-category-header">
+                            <div class="skill-icon">🛠️</div>
+                            <h3>Other Skills</h3>
+                        </div>
                         <div class="skill-items">
-                            <span class="skill-badge">Git</span>
+                            <div class="skill-item">
+                                <i class="devicon-git-plain colored"></i>
+                                <span>Git</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -191,20 +465,25 @@
             <div class="container">
                 <h2 class="section-title">Get In Touch</h2>
                 <div class="contact-content">
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision.</p>
                     <div class="contact-links">
-                        <a href="https://github.com/vqdung71104" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/vqdung71104" class="contact-link" target="_blank"
+                            rel="noopener noreferrer">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
-                            GitHub
+                            <span>GitHub</span>
                         </a>
-                        <a href="mailto:vqdung71104@gmail.com" class="contact-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <a href="mailto:vuquangdung71104@gmail.com" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
-                            Email
+                            <span>Email</span>
                         </a>
                     </div>
                 </div>
@@ -217,5 +496,102 @@
             <p>&copy; 2026 Vu Quang Dung. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // GPA Chart
+        const ctx = document.getElementById('gpaChart').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, 'rgba(139, 92, 246, 0.5)');
+        gradient.addColorStop(1, 'rgba(139, 92, 246, 0.0)');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['20221', '20222', '20231', '20232', '20241', '20242'],
+                datasets: [{
+                    label: 'GPA',
+                    data: [3.2, 2.77, 3.24, 3.08, 2.91, 3.45],
+                    borderColor: '#8b5cf6',
+                    backgroundColor: gradient,
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 5,
+                    pointBackgroundColor: '#8b5cf6',
+                    pointBorderColor: '#fff',
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 7
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(26, 31, 58, 0.95)',
+                        padding: 12,
+                        titleColor: '#e4e6eb',
+                        bodyColor: '#b0b3b8',
+                        borderColor: '#8b5cf6',
+                        borderWidth: 1,
+                        displayColors: false,
+                        callbacks: {
+                            label: function (context) {
+                                return 'GPA: ' + context.parsed.y.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 2.5,
+                        max: 4.0,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)',
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#b0b3b8',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        ticks: {
+                            color: '#b0b3b8',
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
